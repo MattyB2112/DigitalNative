@@ -1,0 +1,68 @@
+body {
+  font-family: Calibri, "Gill Sans", "Gill Sans MT", "Trebuchet MS", sans-serif;
+  font-size: 11;
+}
+
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border: 5px solid rgb(60, 60, 59);
+  border-radius: 25px;
+  width: 360px;
+  padding: 20px;
+  background-color: rgb(137, 200, 46);
+  color: rgb(60, 60, 59);
+  height: 150px;
+  position: relative;
+}
+
+#Name,
+#Email,
+#Credit-Card-I {
+  padding: 5px;
+  margin: 5px;
+  width: 270px;
+}
+
+form {
+  display: table;
+  text-align: center;
+}
+p {
+  display: table-row;
+  text-align: center;
+}
+label {
+  display: table-cell;
+}
+
+.submit-button {
+  background-color: rgb(231, 0, 100);
+  border: 1px solid rgb(60, 60, 59);
+  border-radius: 5px;
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.errors-container {
+  width: 500px;
+  padding: 10px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.invalid {
+  border: 3px solid rgb(231, 0, 100);
+}
+
+#name-error,
+#email-error,
+#card-error {
+  padding: 5px;
+}

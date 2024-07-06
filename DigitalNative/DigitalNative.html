@@ -3,7 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="./DigitalNative.js" defer type="module"></script>
+    <link rel="stylesheet" href="DigitalNative.css" />
     <title>Digital Native Apprenticeship Challenge</title>
+    
+    <div class="form-container">
+    <form method="GET" id="id-form">
+      <form>
+        <p>
+          <label for="Name">Name:</label>
+          <input id="Name" type="text" placeholder="Enter Your Name" required>
+          
+        </p>
+        <p>
+          <label for="Email">Email:</label>
+          <input id="Email" type="text"   placeholder="Enter Your Email" required>
+          
+        </p>
+        <p>
+          <label for="Credit-Card-I">Card:</label>
+          <input id="Credit-Card-I" type="text" placeholder="Enter A Proxy Credit Card Number." required>
+        </p>
+        <button type="submit" class="submit-button">Submit</button>
+      </form>
+    </div>
+    <div class="errors-container">
+    <div id="error" role="alert"></div>
+    <div id="error" role="alert"></div>
+  </div>
   </head>
   <body></body>
 </html>
