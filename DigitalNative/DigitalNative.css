@@ -50,7 +50,7 @@ label {
 }
 
 .errors-container {
-  width: 500px;
+  width: 1100px;
   padding: 10px;
   margin: 10px;
   display: flex;
@@ -64,5 +64,5 @@ label {
 #name-error,
 #email-error,
 #card-error {
-  padding: 5px;
+  font-weight: bold;
 }

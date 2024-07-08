@@ -3,8 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="./DigitalNative.js" defer type="module"></script>
+    <script src="./DigitalNative.js"></script>
     <link rel="stylesheet" href="DigitalNative.css" />
+    
+  </head>
+  <body>
     <title>Digital Native Apprenticeship Challenge</title>
     
     <div class="form-container">
@@ -12,25 +15,25 @@
       <form>
         <p>
           <label for="Name">Name:</label>
-          <input id="Name" type="text" placeholder="Enter Your Name" required>
+          <input id="Name" type="text" placeholder="Enter Your Name" onblur="nameCheck(document.getElementById('Name'))" required>
           
         </p>
         <p>
           <label for="Email">Email:</label>
-          <input id="Email" type="text"   placeholder="Enter Your Email" required>
+          <input id="Email" type="text"   placeholder="Enter Your Email" onblur="emailCheck(document.getElementById('Email'))" required>
           
         </p>
         <p>
           <label for="Credit-Card-I">Card:</label>
-          <input id="Credit-Card-I" type="text" placeholder="Enter A Proxy Credit Card Number." required>
+          <input id="Credit-Card-I" type="text" placeholder="Enter A Proxy Credit Card Number." required onblur="cardCheck(document.getElementById('Credit-Card-I'))">
         </p>
         <button type="submit" class="submit-button">Submit</button>
       </form>
     </div>
     <div class="errors-container">
-    <div id="error" role="alert"></div>
-    <div id="error" role="alert"></div>
+    <div id="name-error" role="alert"></div>
+    <div id="email-error" role="alert"></div>
+    <div id="card-error" role="alert"></div>
   </div>
-  </head>
-  <body></body>
+</body>
 </html>
