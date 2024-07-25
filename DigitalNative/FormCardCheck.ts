@@ -1,33 +1,37 @@
 function cardCheck(inputCardNumber) {
+  const numberCheckRegex = /[0-9]/g;
+  if (!inputCardNumber.value.match(numberCheckRegex)) {
+    throw new Error("Card number can only contain numbers");
+  }
+  let cardValid = false;
   const cardNumberValue = inputCardNumber.value;
   let finalNumbersarray = [];
   let zeroCheck = 0;
   let finalTotal = 0;
-  const cardErrorMessage = document.getElementById("card-error");
-  cardErrorMessage.innerText = "";
+  const cardValidMessage = document.getElementById("card-valid");
 
   //check the card number is 16 digits long, if not add relevant error message
-  if (cardNumberValue.length < 16) {
-    inputCardNumber.classList.add("invalid");
-    cardErrorMessage.innerText +=
-      "Error: Card number too short, must be 16 digits";
-  } else if (cardNumberValue.length > 16) {
-    inputCardNumber.classList.add("invalid");
-    cardErrorMessage.innerText +=
-      "Error: Card number too long, must be 16 digits";
+  if (cardNumberValue.length < 16 || cardNumberValue.length > 16) {
+    inputCardNumber.classList.remove("valid-border");
+    inputCardNumber.classList.add("invalid-border");
+
+    throw new Error("Card number must be 16 digits");
   } else {
     //first, split the card number into an array of length 16 for each number on the card
-    const cardNumbersArray = cardNumberValue.split("");
+    const cardNumbersArray = cardNumberValue.toString().split("");
 
     //next, check that the sum of the individual card number digits is not 0
     for (let i = 0; i < cardNumbersArray.length; i++) {
       zeroCheck += Number(cardNumbersArray[i]);
     }
+
     //if it is, return false
     if (zeroCheck === 0) {
-      cardErrorMessage.innerText = "Error: Invalid card number";
-      inputCardNumber.classList.add("invalid");
+      inputCardNumber.classList.remove("valid-border");
+      inputCardNumber.classList.add("invalid-border");
+      throw new Error("Invalid card number");
     }
+
     //otherwise, carry out the Luhn algorithm
     else
       cardNumbersArray.map((num, i) => {
@@ -36,7 +40,7 @@ function cardCheck(inputCardNumber) {
           finalNumbersarray.push(Number(cardNumbersArray[i]));
         } else {
           //for all odd indexes (i.e. every second card number digit, double it)
-          const doubledNumber = num * 2;
+          const doubledNumber = Number(num) * 2;
 
           //if doubled card number digit is greater than or equal to 10, add the individual digits together and add the total into the array
           if (doubledNumber >= 10) {
@@ -57,13 +61,18 @@ function cardCheck(inputCardNumber) {
       finalTotal += finalNumbersarray[i];
     }
 
-    //check that the total is divisible by 10
+    //check that the total is divisible by 10, if it is set cardValid to true, otherwise set it to false
     if (finalTotal % 10 === 0) {
       cardValid = true;
-      inputCardNumber.classList.remove("invalid");
+      inputCardNumber.classList.remove("invalid-border");
+      inputCardNumber.classList.add("valid-border");
+      cardValidMessage.innerText = "Valid Card Number";
+      return cardValid;
     } else {
-      cardErrorMessage.innerText = "Error: Invalid card number";
-      inputCardNumber.classList.add("invalid");
+      cardValid = false;
+      inputCardNumber.classList.remove("valid-border");
+      inputCardNumber.classList.add("invalid-border");
+      throw new Error("Invalid card number");
     }
   }
 }

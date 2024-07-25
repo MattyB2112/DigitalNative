@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/80e5adb641d7a576a93f877e02325b43.css">
+  </head>
+  <body>
+    <div class="form-and-errors-container">
+      <div class="form-container">
+        <form method="GET" id="id-form">
+          <p>
+            <label for="Name" class="name-label">Name:</label>
+            <input id="Name" type="text" placeholder="Enter Your Name" onblur="try {
+                let nameValid = nameCheck(document.getElementById('Name'))
+              }
+              catch(e){
+                alert(e.message)
+              }" required="">
+          </p>
+          <p>
+            <label for="Email" class="email-label">Email:</label>
+            <input id="Email" type="text" placeholder="Enter Your Email" onblur="try {
+                emailCheck(document.getElementById('Email'))
+              }
+              catch(e){
+                alert(e.message)}" required="">
+          </p>
+          <p>
+            <label for="Credit-Card-I" class="credit-card-label">Card:</label>
+            <input id="Credit-Card-I" type="text" placeholder="Enter A Proxy Credit Card Number." onblur="try {
+                cardCheck(document.getElementById('Credit-Card-I'))
+                }
+                catch(e){
+                  alert(e.message)}" required="">
+          </p>
+          <button type="submit" class="submit-button">Submit</button>
+        </form>
+      </div>
+      <div class="messages-container" id="center">
+        <p id="name-valid" role="alert"></p>
+        <p id="email-valid" role="alert"></p>
+        <p id="card-valid" role="alert"></p>
+      </div>
+    </div>
+    <script>exports = {};</script>
+    <script src="/aba353302b1ceafc3e84c100ee291a82.js" type="text/javascript"></script>
+    <script src="/a2ecd4e43588af5e5df4b82b29809d5e.js" type="text/javascript"></script>
+    <script src="/faa26f825711bcb25d591502d1391aae.js" type="text/javascript"></script>
+    <script src="/1685f1c0c589fd574d4f6221f9ed556b.js" type="text/javascript"></script>
+  </body>
+</html>

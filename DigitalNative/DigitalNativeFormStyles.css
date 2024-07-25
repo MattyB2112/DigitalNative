@@ -3,6 +3,13 @@ body {
   font-size: 11;
 }
 
+.form-and-errors-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .form-container {
   display: flex;
   align-items: center;
@@ -10,7 +17,7 @@ body {
   flex-direction: column;
   border: 5px solid rgb(60, 60, 59);
   border-radius: 25px;
-  width: 360px;
+  width: 340px;
   padding: 20px;
   background-color: rgb(137, 200, 46);
   color: rgb(60, 60, 59);
@@ -18,12 +25,19 @@ body {
   position: relative;
 }
 
+.email-label,
+.name-label,
+.credit-card-label {
+  width: 25%;
+  font-size: 16px;
+}
+
 #Name,
 #Email,
 #Credit-Card-I {
   padding: 5px;
   margin: 5px;
-  width: 270px;
+  width: 250px;
 }
 
 form {
@@ -49,21 +63,27 @@ label {
   transform: translateX(-50%);
 }
 
-.errors-container {
-  width: 1150px;
-  padding: 10px;
-  margin: 10px;
-  display: flex;
-  flex-direction: column;
+#center {
+  margin-top: 20px;
 }
 
-.invalid {
+.invalid-border {
   border: 3px solid rgb(231, 0, 100);
+}
+
+.valid-border {
+  border: 3px solid rgb(73, 114, 15);
 }
 
 #name-error,
 #email-error,
-#card-error,
-#form-error {
+#card-error {
   font-weight: bold;
+  color: rgb(231, 0, 100);
+}
+#name-valid,
+#email-valid,
+#card-valid {
+  font-weight: bold;
+  color: rgb(137, 200, 46);
 }
