@@ -1,0 +1,17 @@
+.form-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid rgb(60, 60, 59);
+  border-radius: 25px;
+  width: 295px;
+  padding: 20px;
+  background-color: rgb(137, 200, 46);
+  color: rgb(60, 60, 59);
+  height: 160px;
+}
+
+form {
+  display: table;
+  text-align: center;
+}

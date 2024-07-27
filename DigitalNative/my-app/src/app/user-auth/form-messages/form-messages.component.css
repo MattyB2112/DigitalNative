@@ -1,0 +1,22 @@
+p {
+  display: table-row;
+  text-align: center;
+}
+
+#center {
+  margin-top: 20px;
+  height: 75px;
+}
+
+#name-invalid-message,
+#email-invalid-message,
+#card-invalid-message {
+  font-weight: bold;
+  color: rgb(231, 0, 100);
+}
+#name-valid-message,
+#email-valid-message,
+#card-valid-message {
+  font-weight: bold;
+  color: rgb(137, 200, 46);
+}

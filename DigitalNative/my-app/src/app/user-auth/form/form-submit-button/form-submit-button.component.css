@@ -1,0 +1,11 @@
+.submit-button {
+  background-color: rgb(231, 0, 100);
+  border: 1px solid rgb(60, 60, 59);
+  border-radius: 5px;
+  width: 70px;
+  height: 25px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 60%;
+}

@@ -1,0 +1,27 @@
+.email-label {
+  width: 25%;
+  font-size: 16px;
+}
+
+.input-field {
+  padding: 5px;
+  margin: 5px;
+  width: 250px;
+}
+
+label {
+  display: table-cell;
+}
+
+.invalid-border {
+  border: 3px solid rgb(231, 0, 100);
+}
+
+.valid-border {
+  border: 3px solid rgb(73, 114, 15);
+}
+
+p {
+  display: table-row;
+  text-align: center;
+}

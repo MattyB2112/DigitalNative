@@ -1,0 +1,12 @@
+<p>
+  <label for="Credit-Card-I" class="credit-card-label">Card:</label>
+  <input
+    #CreditCard
+    class="input-field"
+    type="text"
+    placeholder="Enter A Proxy Credit Card Number."
+    (blur)="cardCheck(CreditCard)"
+    required
+  />
+</p>
+<p>{{ item3 }}</p>

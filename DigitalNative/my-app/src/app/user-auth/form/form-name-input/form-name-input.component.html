@@ -1,0 +1,12 @@
+<p>
+  <label for="Name" class="name-label">Name:</label>
+  <input
+    #Name
+    class="input-field"
+    type="text"
+    placeholder="Enter Your Name"
+    (blur)="nameCheck(Name)"
+    required
+  />
+</p>
+<p>{{ item }}</p>
